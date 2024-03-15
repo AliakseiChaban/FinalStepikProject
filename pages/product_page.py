@@ -29,3 +29,11 @@ class ProductPage(BasePage):
         basket_price_text = self.get_elements_text(*ProductPageLocators.BASKET_VALUE)
 
         assert product_price_text in basket_price_text, f"The cost in the Basket has to be {product_price_text}"
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE_WITH_PRODUCT_NAME), \
+            "Success message is presented, but should not be"
+
+    def is_success_message_disappear(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE_WITH_PRODUCT_NAME), \
+            "Success message doesn't disappear"
