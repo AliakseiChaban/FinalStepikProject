@@ -9,11 +9,18 @@ class MainPageLocators:
 class BasePageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    VIEW_BASKET = (By.CSS_SELECTOR, "span.btn-group a")
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 
 
 class LoginPageLocators:
     LOGIN_FORM_ON_THE_LOGIN_PAGE = (By.CSS_SELECTOR, "#login_form")
-    REGISTRATION_FORM_ON_THE_LOGIN_PAGE = (By.CSS_SELECTOR, "#register_form1")
+    REGISTRATION_FORM_ON_THE_LOGIN_PAGE = (By.CSS_SELECTOR, "#register_form")
+
+    REGISTER_EMAIL_ADDRESS_FIELD = (By.CSS_SELECTOR, "#id_registration-email")
+    REGISTER_PWD_FIELD = (By.CSS_SELECTOR, "#id_registration-password1")
+    REGISTER_CONFIRM_PWD_FIELD = (By.CSS_SELECTOR, "#id_registration-password2")
+    REGISTER_BTN = (By.NAME, "registration_submit")
 
 
 class ProductPageLocators:
@@ -25,3 +32,6 @@ class ProductPageLocators:
     SUCCESS_MESSAGE_WITH_BASKET_COST = (By.CSS_SELECTOR, "div#messages div.alert:nth-child(3)")
 
 
+class BasketPageLocators:
+    BASKET_IS_EMPTY_MESSAGE = (By.CSS_SELECTOR, "div#content_inner p")
+    PRODUCT_IS_ADDED_TO_BASKET = (By.CSS_SELECTOR, "div.basket-items")
