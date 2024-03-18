@@ -23,7 +23,7 @@ class TestLoginFormMainPage:
         page.should_be_login_link()
 
 
-@pytest.mark.step11
+@pytest.mark.step_4_3_11
 def test_guest_cant_see_product_in_basket_opened_from_main_page(browser):
     page = MainPage(browser, link)
     page.open()
